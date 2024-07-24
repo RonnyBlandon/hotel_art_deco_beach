@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap_css/bootstrap.min.css' %}">
+    {% block styles %}{% endblock styles %}
+    <link rel='icon' href="{% static 'img/favicon.ico' %}">
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

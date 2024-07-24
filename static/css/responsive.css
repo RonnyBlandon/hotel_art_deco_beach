@@ -1,0 +1,30 @@
+/* Estilos base */
+/* Estilo para pantallas moviles */
+html {
+    font-size: 16px;
+  }
+
+@media (min-width: 375px) {
+    html {
+      font-size: 19px;
+    }
+}
+
+/* Estilo para pantallas de escritorio */
+@media (min-width: 1024px) {
+    html {
+      font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    html {
+      font-size: 22px;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+      font-size: 39px;
+    }
+}

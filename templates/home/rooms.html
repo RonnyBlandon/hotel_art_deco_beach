@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} contacto {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/rooms.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+{% include 'includes/header.html' %}
+
+<div class="container">
+
+    <h2 class="my-4">Rooms & Pricing</h2>
+
+
+    <!-- rooms -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card bg-body-secondary">
+                    <img src="{% static 'img/rooms/room-2.jpg' %}" class="card-img-top" alt="Habitación 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Boutique Double Bed</h5>
+                        <p class="card-text">Enjoy our double bedroom with spacious rooms and ocean-front views that only Hotel Art Deco Beach can offer situated 50 steps away from the Malecon in La Ceiba.</p>
+                        <a href="{% url 'home_app:room' %}" class="btn btn-primary">Check Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-body-secondary">
+                    <img src="{% static 'img/rooms/room-3.jpg' %}" class="card-img-top" alt="Habitación 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Boutique Triple Bed</h5>
+                        <p class="card-text">Need a family room with ample bedding? Our Queen size beds and ocean view is just what you need to enjoy with the whole famliy whne visiting our fair city.</p>
+                        <a href="{% url 'home_app:room' %}" class="btn btn-primary">Check Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-body-secondary">
+                    <img src="{% static 'img/rooms/room-1.jpg' %}" class="card-img-top" alt="Habitación 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Boutique Single bed</h5>
+                        <p class="card-text">A cute getaway with the missus is just what this room was made for, spend a relaxing weeking in our ocean front single rooms</p>
+                        <a href="{% url 'home_app:room' %}" class="btn btn-primary">Check Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-body-secondary">
+                    <img src="{% static 'img/rooms/room-2.jpg' %}" class="card-img-top" alt="Habitación 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Boutique Double Bed</h5>
+                        <p class="card-text">Enjoy our double bedroom with spacious rooms and ocean-front views that only Hotel Art Deco Beach can offer situated 50 steps away from the Malecon in La Ceiba.</p>
+                        <a href="{% url 'home_app:room' %}" class="btn btn-primary">Check Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- rooms -->
+
+
+</div>
+
+{% include 'includes/footer.html' %}
+{% endblock content %}

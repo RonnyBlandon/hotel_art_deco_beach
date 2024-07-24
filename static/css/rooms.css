@@ -1,0 +1,10 @@
+.card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: calc(1.2em * 3); /* Ajusta el valor basado en el line-height y número de líneas */
+    line-height: 1.2em;
+}

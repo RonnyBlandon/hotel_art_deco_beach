@@ -1,0 +1,101 @@
+/*Section banner*/
+.banner {
+    position: relative;
+    height: 10rem; /* Define la altura específica del banner */
+}
+.banner img {
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+.welcome-message {
+    width: 100%;
+}
+.welcome-message h1 {
+    font-size: 1.85rem;
+}
+.welcome-message p {
+    font-size: 0.95rem;
+}
+.arrow-nav {
+    position: absolute;
+    bottom: -12.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10rem;
+    background-color: #BFA145;
+}
+
+/*Section information and reservation*/
+#information {
+    margin: 1rem 0rem;
+    height: fit-content;
+}
+
+/*Section services*/
+.services {
+    padding: 4rem 0rem;
+    background-color: #DEDBD3;
+}
+.caption {
+    padding: 1.3rem;
+    color: #46433B;
+    background-color: #B9B2A0;
+}
+.caption img {
+    width: 1rem;
+}
+
+
+/*MEDIA QUERY*/
+
+
+@media (min-width: 768px) {
+    /*Section banner*/
+    .banner {
+        height: 17rem;
+    }
+    .welcome-message h1 {
+        font-size: 3.5rem;
+    }
+    .welcome-message p {
+        font-size: 1.1rem;
+    }
+    .arrow-nav {
+      bottom: -8%;
+    }
+
+    /*Section services*/
+    .caption {
+        padding: 0.9rem;
+        color: #46433B;
+        background-color: #B9B2A0;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*Section banner*/
+    .banner {
+        height: 33rem;
+    }
+    .welcome-message h1 {
+        font-size: 4.6rem;
+    }
+    .welcome-message p {
+        font-size: 1.25rem;
+    }
+    .arrow-nav {
+      width: 6.5rem;
+      height: 6.5rem;
+      bottom: -9%;
+    }
+}
+
+/*Se necesita esta media query para darle tamaño al video solo a resoluciones menores a 1024px*/
+@media (max-width: 1024px) {
+    .video-info {
+        height: 12rem;
+    }
+}

@@ -1,0 +1,41 @@
+/* own classes */
+/* Footer class */
+footer {
+    padding: 2rem 0rem;
+    background-color: #585650;
+    color: #d3d2d2ac;
+}
+.footer-link {
+    color: #d3d2d2ac;
+    text-decoration: none;
+} 
+.footer-link:hover {
+    color: #fff;
+}
+.custom-copyright {
+    padding: 0.2rem;
+    color: #c4c3c3ac;
+    background-color: #252423;
+}
+.footer-img-linkedin {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.footer-btn-suscription {
+    padding: 0.4rem 2rem;
+    color: #fff;
+    background-color: #BFA145;
+    border-radius: 0 0.3rem 0.3rem 0;
+}
+.footer-btn-suscription:hover {
+    color: #fff;
+    background-color: #a1883a;
+}
+.social-img {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fff;
+}
+.social-img:hover {
+    filter: brightness(0) invert(1); /* Color al hacer hover, se puede ajustar según tu diseño */
+}

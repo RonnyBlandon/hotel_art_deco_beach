@@ -1,0 +1,53 @@
+body {
+    background-color: #f8f9fa;
+}
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.room-details {
+    background-color: #ffffff;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.room-title {
+    color: #343a40;
+    font-weight: 600;
+}
+.room-description {
+    color: #6c757d;
+}
+.badge-available {
+    background-color: #28a745;
+    color: #fff;
+}
+.badge-unavailable {
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-reserve {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.31rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.btn-reserve:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details-container ul {
+    margin: 0;
+    padding: 0;
+}

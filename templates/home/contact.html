@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} home {% endblock title %}
+
+{% block content %}
+
+{% include 'includes/header.html' %}
+
+<div class="container">
+
+    <h1 class="title my-3">Contact Us</h1>
+
+
+    <!-- form -->
+
+    <div class="contact">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="map">
+                    <iframe
+                        src="https://maps.google.com/maps?q=hotel%20art%20deco%20beach%20la%20ceiba&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="300" frameborder="0"></iframe>
+                </div>
+
+
+                <div class="my-5 mx-auto col-sm-6 col-sm-offset-3">
+                    <div class="spacer">
+
+                        <h4>Write to us</h4>
+                        <form action="" method="POST">
+
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" class="form-control" name="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="phone" class="form-control" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="form-group mb-3">
+                                <textarea type="email" class="form-control" placeholder="Message" rows="4"
+                                    name="message"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- form -->
+
+{% include 'includes/footer.html' %}
+{% endblock content %}

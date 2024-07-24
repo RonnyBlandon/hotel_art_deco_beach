@@ -1,0 +1,48 @@
+{% load static %}
+{% block styles %} 
+<style>
+	.active {
+		color: #fff !important; /* Asegura que los enlaces sean blancos */
+	}
+	.nav-link {
+		color: #000; /* Asegura que los enlaces sean negros */
+	}
+</style>
+{% endblock styles %}
+
+<!--Main-menu-->
+<nav class="menu navbar navbar-expand-lg bg-body-secondary">
+	<div class="container-fluid">
+		<a class="navbar-logo me-4 p-2" href="{% url 'home_app:home' %}"><img src="{% static 'img/logo.png' %}"
+				alt="Logo"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav nav-pills me-auto mb-2 mb-lg-0">
+				<li class="nav-item m-1">
+					<a class="nav-link" id="home" aria-current="page"
+						href="{% url 'home_app:home' %}">Home</a>
+				</li>
+				<li class="nav-item m-1">
+					<a class="nav-link" id="rooms" href="{% url 'home_app:rooms' %}">Rooms & Pricing</a>
+				</li>
+				<li class="nav-item m-1">
+					<a class="nav-link" id="introduction" href="{% url 'home_app:introduction' %}">Introduction</a>
+				</li>
+				<li class="nav-item m-1">
+					<a class="nav-link" id="gallery" href="{% url 'home_app:gallery' %}">Gallery</a>
+				</li>
+				<li class="nav-item m-1">
+					<a class="nav-link" id="contact" href="{% url 'home_app:contact' %}">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+  
+
+<script src="{% static 'js/bootstrap_js/bootstrap.js' %}"></script>
+<script src="{% static 'js/header.js' %}"></script>

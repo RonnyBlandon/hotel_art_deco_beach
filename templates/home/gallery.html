@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} contacto {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+{% include 'includes/header.html' %}
+
+<div class="container">
+    <h1 class=" my-4">Gallery</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+        {% for image in gallery %}
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="{{ image.image.url }}" class="card-img-top" alt="Imagen 1">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'includes/footer.html' %}
+{% endblock content %}

@@ -1,0 +1,39 @@
+/* Section Video */
+.box-video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+.box-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*MEDIA QUERY*/
+
+
+@media (min-width: 768px) {
+    /* Section Introduction */
+    .container {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Section Introduction */
+    .container {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    /* Section Introduction */
+    .container {
+        width: 80rem;
+        font-size: 1rem;
+    }
+}
