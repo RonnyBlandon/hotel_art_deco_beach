@@ -20,3 +20,25 @@
 .page.active {
     display: block;
 }
+
+/* Image viewer modal */
+.modal-fullscreen .modal-content {
+    height: 100vh;
+}
+
+.modal-body img {
+    width: 100%;
+    height: calc(100vh - 56px); /* Ajusta la altura para ocupar toda la pantalla menos la altura del header */
+    object-fit: contain;
+}
+
+.modal-content {
+    background-color: #000; /* Fondo negro */
+}
+
+.modal-title,
+.btn-close {
+    color: #fff; /* Texto y botón de cerrar en blanco */
+}
+
+

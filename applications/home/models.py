@@ -38,6 +38,7 @@ class IntroductionModel(models.Model):
 
 
 class GalleryModel(models.Model):
+    title = models.CharField(max_length=20)
     image = models.ImageField(upload_to='gallery_images/')
 
     def __str__(self):
