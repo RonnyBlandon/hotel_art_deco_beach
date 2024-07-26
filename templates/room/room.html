@@ -18,18 +18,12 @@
     <div class="embed-responsive embed-responsive-16by9 mt-3">
         <div id="roomCarousel" class="carousel slide embed-responsive-item">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'img/rooms/room-1.jpg' %}" class="d-block w-100"
-                        alt="Imagen de la Habitación 1">
+                {% for image in room.room_image.all %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{{ image.image.url }}" class="d-block w-100"
+                        alt="Imagen de la Habitación {{ room.name }}">
                 </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/rooms/room-2.jpg' %}" class="d-block w-100"
-                        alt="Imagen de la Habitación 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/rooms/room-3.jpg' %}" class="d-block w-100"
-                        alt="Imagen de la Habitación 3">
-                </div>
+                {% endfor %}
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -47,17 +41,14 @@
         <div class="details-container">
             <ul class="list-unstyled">
                 <li><strong>Availability:</strong> <span class="badge badge-available">Available</span></li>
-                <li><strong>Amount of people:</strong> 2</li>
-                <li><strong>Size:</strong> 35 m²</li>
-                <li><strong>Price:</strong> $120 per night</li>
+                <li><strong>Amount of people:</strong> {{ room.amount_of_people }}</li>
+                <li><strong>Size:</strong> {{ room.size }} <b>sq</b></li>
+                <li><strong>Price:</strong> ${{ room.price }} per night</li>
             </ul>
             <button type="button" class="btn-reserve" data-bs-toggle="modal"
                 data-bs-target="#reserveModal">Reserve</button>
         </div>
-        <p class="room-description mt-3">An elegant luxury room equipped with all modern amenities.
-            Enjoy a relaxing atmosphere with a spectacular view, a king-size bed, air conditioning and
-            Free Wi-Fi connection. The room also has a comfortable seating area and a private bathroom with
-            high quality toiletries.</p>
+        <p class="room-description mt-3">{{ room.description }}</p>
     </div>
 </div>
 

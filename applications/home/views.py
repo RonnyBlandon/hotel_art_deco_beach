@@ -13,14 +13,6 @@ class HomeView(TemplateView):
         return context
 
 
-class RoomsView(TemplateView):
-    template_name = 'home/rooms.html'
-
-
-class RoomView(TemplateView):
-    template_name = 'home/room.html'
-
-
 class IntroductionView(TemplateView):
     template_name = 'home/introduction.html'
 
