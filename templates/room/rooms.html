@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %} contacto {% endblock title %}
+{% block title %} rooms {% endblock title %}
 
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/rooms.css' %}">
@@ -13,7 +14,7 @@
 
 <div class="container">
 
-    <h2 class="my-4">Rooms & Pricing</h2>
+    <h2 class="my-4">{% trans 'Rooms & Pricing' %}</h2>
 
 
     <!-- rooms -->
@@ -27,7 +28,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ room.name }}</h5>
                         <p class="card-text">{{ room.description }}</p>
-                        <a href="{% url 'room_app:room' room.slug %}" class="btn btn-primary">Check Details</a>
+                        <a href="{% url 'room_app:room' room.slug %}" class="btn btn-primary">{% trans 'Check Details' %}</a>
                     </div>
                 </div>
             </div>

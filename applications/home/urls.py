@@ -9,4 +9,5 @@ urlpatterns = [
     path('introduction/', views.IntroductionView.as_view(), name='introduction'),
     path('gallery/', views.GalleryView.as_view(), name='gallery'),
     path('contact/', views.ContactView.as_view(), name='contact'),
+    path('notification_subscription/', views.SubscriptionView.as_view(), name='notification_subscription'),
 ]

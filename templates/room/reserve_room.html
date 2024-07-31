@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} reserve room {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/reserve_room.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+{% include 'includes/header.html' %}
+
+<div class="container-background bg-light py-2">
+    <div class="container custom-container bg-light py-3 my-4">
+        <h3 class="room-title">{{ room.name }}</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3 form-group">
+                {{ form.name }}
+                {% if form.name.errors %}
+                <div class="text-danger">
+                    {{ form.name.errors }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="mb-3 form-group">
+                {{ form.email }}
+                {% if form.email.errors %}
+                <div class="text-danger">
+                    {{ form.email.errors }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="mb-3 form-group">
+                {{ form.phone }}
+                {% if form.phone.errors %}
+                <div class="text-danger">
+                    {{ form.phone.errors }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="mb-3 form-group">
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.rooms }}
+                        {% if form.rooms.errors %}
+                        <div class="text-danger">
+                            {{ form.rooms.errors }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-6">
+                        {{ form.adults }}
+                        {% if form.adults.errors %}
+                        <div class="text-danger">
+                            {{ form.adults.errors }}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 form-group">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="date1">{% trans 'Check-in Date' %}</label>
+                        {{ form.date_start }}
+                        {% if form.date_start.errors %}
+                        <div class="text-danger">
+                            {{ form.date_start.errors }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-6">
+                        <label for="date2">{% trans 'Check-out Date' %}</label>
+                        {{ form.date_end }}
+                        {% if form.date_end.errors %}
+                        <div class="text-danger">
+                            {{ form.date_end.errors }}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 form-group">
+                {{ form.message }}
+                {% if form.message.errors %}
+                <div class="text-danger">
+                    {{ form.message.errors }}
+                </div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-primary">{% trans 'Submit' %}</button>
+        </form>
+    </div>
+</div>
+
+{% include 'includes/footer.html' %}
+{% endblock content %}

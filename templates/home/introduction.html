@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %} Introduction {% endblock title %}
+{% block title %} introduction {% endblock title %}
 
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/introduction.css' %}">
@@ -13,22 +14,34 @@
 
 <div class="container">
 
-    <h1 class="title my-3">Introduction</h1>
+    <h1 class="title my-3">{% trans 'Introduction' %}</h1>
     <div class="row">
         <div class="col-sm-4">
-            <p>Hotel Art-Deco Beach since its inception started out as a passion project that later grew to what it is
+            <p>
+                {% blocktrans %}
+                Hotel Art-Deco Beach since its inception started out as a passion project that later grew to what it is
                 today, our gracious benefactor known only as "Mr John" has contributed in the growth of the Malecon
-                situated in the beautiful city of La Ceiba.</p>
+                situated in the beautiful city of La Ceiba.
+                {% endblocktrans %}
+            </p>
         </div>
         <div class="col-sm-4">
-            <p>Our story does not end here, as we are now in the steps of greatness to be added to the historic value
+            <p>
+                {% blocktrans %}
+                Our story does not end here, as we are now in the steps of greatness to be added to the historic value
                 the Malecon holds in our fair city. Once inmortalized in our fellow citizens memories, Hotel Art Deco
-                Beach will be forever remembered by all who stood in its shadow.</p>
+                Beach will be forever remembered by all who stood in its shadow.
+                {% endblocktrans %}
+            </p>
         </div>
         <div class="col-sm-4">
-            <p>We are are grateful to have been included in this greatest of plans where here stands a 6 story majesty
+            <p>
+                {% blocktrans %}
+                We are are grateful to have been included in this greatest of plans where here stands a 6 story majesty
                 where once stood nothing, therefore inheriting as a people the added value of such a striking featured
-                building in front of Malecon Beach.</p>
+                building in front of Malecon Beach.
+                {% endblocktrans %}
+            </p>
         </div>
     </div>
 

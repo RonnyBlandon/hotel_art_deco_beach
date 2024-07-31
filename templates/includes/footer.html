@@ -1,5 +1,6 @@
 {% load static %}
-{% block styles %} 
+{% block styles %}
+{% load i18n %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
 {% endblock styles %}
 
@@ -10,32 +11,59 @@
         <div class="row">
             <div class="col-sm-5">
                 <h4 class="text-white">Hotel Art Deco Beach</h4>
-                <p>Hotel Art Deco Beach raising the standards of all boutique hotel in Central America. Rest assured that we are in business to make sure you have a good nights rest and a good morning's start. Situated in front of Malecon La Ceiba, Hotel Art Deco Beach is always in the middle of the cities social activities. </p>
+                <p>
+                    {% blocktrans %}Hotel Art Deco Beach raising the standards of all boutique hotel in Central America.
+                    Rest assured that we are in business to make sure you have a good nights rest and a good morning's
+                    start. Situated in front of Malecon La Ceiba, Hotel Art Deco Beach is always in the middle of the
+                    cities social activities.{% endblocktrans %}
+                </p>
             </div>
 
             <div class="col-sm-3">
-                <h4 class="text-white">Quick Links</h4>
+                <h4 class="text-white">{% trans 'Quick Links' %}</h4>
                 <ul class="list-unstyled">
-                    <li><a class="footer-link" href="{% url 'room_app:rooms' %}">Rooms & Pricing</a></li>
-                    <li><a class="footer-link" href="{% url 'home_app:introduction' %}">Introduction</a></li>
-                    <li><a class="footer-link" href="{% url 'home_app:gallery' %}">Gallery</a></li>
-                    <li><a class="footer-link" href="{% url 'home_app:contact' %}">Contact</a></li>
+                    <li><a class="footer-link" href="{% url 'room_app:rooms' %}">{% trans 'Rooms & Pricing' %}</a></li>
+                    <li><a class="footer-link" href="{% url 'home_app:introduction' %}">{% trans 'Introduction' %}</a>
+                    </li>
+                    <li><a class="footer-link" href="{% url 'home_app:gallery' %}">{% trans 'Gallery' %}</a></li>
+                    <li><a class="footer-link" href="{% url 'home_app:contact' %}">{% trans 'Contact' %}</a></li>
                 </ul>
+                <form action="{% url 'set_language' %}" method="post" id="languageForm">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ request.path }}">
+                    <select name="language" onchange="document.getElementById('languageForm').submit();">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
             </div>
-            <div class="col-sm-4 subscribe">
-                <h4 class="text-white">Subscription</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter your email">
+            <div class="col-sm-4 subscribe mt-3 mt-md-0">
+                <h4 class="text-white">{% trans 'Subscription' %}</h4>
+                <form class="input-group" method="post" action="{% url 'home_app:notification_subscription' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    {{ form_subscription.email }}
                     <span class="input-group-btn">
-                        <button class="footer-btn-suscription btn btn-default" type="button">Get Notified</button>
+                        <button class="footer-btn-suscription btn btn-default" type="submit">{% trans 'Get Notified'%}</button>
                     </span>
-                </div>
+                </form>
                 <div class="social mt-3">
-                    <a href="https://facebook.com/hotelartdecobeach"><img class="social-img" src="{% static 'img/social_media/facebook.svg' %}" alt="facebook icon"></a>
-                    <a href="https://instagram.com/hotelartdecobeach"><img class="social-img" src="{% static 'img/social_media/instagram.svg' %}" alt="instagram icon"></a>
-                    <a href="https://twitter.com/hotelartdecobeach"><img class="social-img" src="{% static 'img/social_media/twitter.svg' %}" alt="twitter icon"></a>
-                    <a href="https://pintrest.com/hotelartdecobeach"><img class="social-img" src="{% static 'img/social_media/pinterest.svg' %}" alt="pinterest icon"></a>
-                    <a href="https://youtube.com/channel/UC83YBMMVDDVoljA6anHt-tQ"><img class="social-img" src="{% static 'img/social_media/youtube.svg' %}" alt="youtube icon"></a>
+                    <a href="https://facebook.com/hotelartdecobeach"><img class="social-img"
+                            src="{% static 'img/social_media/facebook.svg' %}" alt="facebook icon"></a>
+                    <a href="https://instagram.com/hotelartdecobeach"><img class="social-img"
+                            src="{% static 'img/social_media/instagram.svg' %}" alt="instagram icon"></a>
+                    <a href="https://twitter.com/hotelartdecobeach"><img class="social-img"
+                            src="{% static 'img/social_media/twitter.svg' %}" alt="twitter icon"></a>
+                    <a href="https://pintrest.com/hotelartdecobeach"><img class="social-img"
+                            src="{% static 'img/social_media/pinterest.svg' %}" alt="pinterest icon"></a>
+                    <a href="https://youtube.com/channel/UC83YBMMVDDVoljA6anHt-tQ"><img class="social-img"
+                            src="{% static 'img/social_media/youtube.svg' %}" alt="youtube icon"></a>
                 </div>
             </div>
         </div>
@@ -45,7 +73,8 @@
 
     <!--/.footer-bottom-->
 </footer>
-<div class="custom-copyright d-flex justify-content-center text-center copyright">Website created by Ronny Blandón.  
+<div class="custom-copyright d-flex justify-content-center text-center copyright">{% trans 'Website created by' %} Ronny
+    Blandón.
     <div class="linkedin ms-1">
         <img class="footer-img-linkedin" src="{% static 'img/Linkedin.svg' %}" alt="Linkedin">
         <a class="footer-link" href="https://www.linkedin.com/in/ronnyblandon/" target="_blank">Linkedin</a>

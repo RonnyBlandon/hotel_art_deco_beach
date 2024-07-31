@@ -35,7 +35,6 @@ SECRET_KEY = get_secret('SECRET_KEY')
 
 
 # Application definition
-
 DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,9 +50,11 @@ LOCAL_APPS = (
 THIRD_PARTY_APPS = ()
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -112,6 +113,28 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('es', 'Spanish'),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
+
+ADMINS = [
+    ('Admin', 'ronnyblandon2015@gmail.com'),
+]
+
+
+# EMAIL SETTINGS
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.outlook.com'  # Por ejemplo, si usas Gmail
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'ronnyblandon@hotmail.com'  # Tu correo electrónico
+EMAIL_HOST_PASSWORD = 'Laguitarra17@'  # Tu contraseña de correo electrónico
 
 
 # Default primary key field type

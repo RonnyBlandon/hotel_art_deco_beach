@@ -1,18 +1,50 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap_css/bootstrap.min.css' %}">
-    {% block styles %}{% endblock styles %}
-    <link rel='icon' href="{% static 'img/favicon.ico' %}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{% endblock title %}</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap_css/bootstrap.min.css' %}">
+{% block styles %}{% endblock styles %}
+<link rel='icon' href="{% static 'img/favicon.ico' %}">
 </head>
+
 <body>
+    <!-- Mensajes de Django -->
+     <style>
+        .success {
+            color: #fff;
+            background-color: #0d0;
+        }
+        .error {
+            color: #fff;
+            background-color: #f00;
+        }
+        .errorlist {
+            color: #fff;
+            background-color: #f00;
+        }
+     </style>
+    {% if messages %}
+    <div class="alert-container position-fixed top-0 start-50 translate-middle-x p-3"
+        style="z-index: 1050; max-width: 100%; min-width: 300px;">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+
     {% block content %}
     {% endblock content %}
 </body>
+
 </html>

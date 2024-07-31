@@ -1,5 +1,7 @@
 {% load static %}
-{% block styles %} 
+{% block styles %}
+{% load i18n %}
+
 <style>
 	.active {
 		color: #fff !important; /* Asegura que los enlaces sean blancos */
@@ -23,26 +25,25 @@
 			<ul class="nav nav-pills me-auto mb-2 mb-lg-0">
 				<li class="nav-item m-1">
 					<a class="nav-link" id="home" aria-current="page"
-						href="{% url 'home_app:home' %}">Home</a>
+						href="{% url 'home_app:home' %}">{% trans 'Home' %}</a>
 				</li>
 				<li class="nav-item m-1">
-					<a class="nav-link" id="rooms" href="{% url 'room_app:rooms' %}">Rooms & Pricing</a>
+					<a class="nav-link" id="rooms" href="{% url 'room_app:rooms' %}">{% trans 'Rooms & Pricing' %}</a>
 				</li>
 				<li class="nav-item m-1">
-					<a class="nav-link" id="introduction" href="{% url 'home_app:introduction' %}">Introduction</a>
+					<a class="nav-link" id="introduction" href="{% url 'home_app:introduction' %}">{% trans 'Introduction' %}</a>
 				</li>
 				<li class="nav-item m-1">
-					<a class="nav-link" id="gallery" href="{% url 'home_app:gallery' %}">Gallery</a>
+					<a class="nav-link" id="gallery" href="{% url 'home_app:gallery' %}">{% trans 'Gallery' %}</a>
 				</li>
 				<li class="nav-item m-1">
-					<a class="nav-link" id="contact" href="{% url 'home_app:contact' %}">Contact</a>
+					<a class="nav-link" id="contact" href="{% url 'home_app:contact' %}">{% trans 'Contact'%}</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
-  
 
 <script src="{% static 'js/bootstrap_js/bootstrap.js' %}"></script>
 <script src="{% static 'js/header.js' %}"></script>

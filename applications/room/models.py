@@ -11,6 +11,10 @@ class RoomModel(TimeStampedModel, models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     available = models.BooleanField()
     slug = models.SlugField(editable=False, max_length=300)
+
+    class Meta:
+        verbose_name = "Room"
+        verbose_name_plural = "Rooms"
     
     def __str__(self):
         return str(self.id)+' - '+self.name

@@ -4,10 +4,16 @@ from django.db import models
 
 class HomeModel(models.Model):
     image = models.ImageField(upload_to='home_images/')
-    title_banner = models.CharField(max_length=20)
-    subtitle_banner = models.CharField(max_length=60)
-    welcome_video = models.FileField(upload_to='videos/')
+    title_banner = models.CharField(max_length=20, blank=True)
+    subtitle_banner = models.CharField(max_length=60, blank=True)
+    welcome_video = models.FileField(upload_to='videos/', blank=True)
 
+    class Meta:
+        verbose_name = "Home Page"
+        verbose_name_plural = "Home Page"
+
+    def __str__(self):
+        return 'Home Page'
 
 class HomeRoomImage(models.Model):
     image = models.ImageField(upload_to='home_images/')
@@ -36,10 +42,32 @@ class HomeBreakfastImage(models.Model):
 class IntroductionModel(models.Model):
     introduction_video = models.FileField(upload_to='videos/')
 
+    class Meta:
+        verbose_name = "Introduction Page"
+        verbose_name_plural = "Introduction Page"
+
+    def __str__(self):
+        return str(self.introduction_video)
+
 
 class GalleryModel(models.Model):
     title = models.CharField(max_length=20)
     image = models.ImageField(upload_to='gallery_images/')
 
+    class Meta:
+        verbose_name = "Gallery Page"
+        verbose_name_plural = "Gallery Page"
+
     def __str__(self):
         return str(self.id)+' '+str(self.image)
+    
+
+class SubscriptionModel(models.Model):
+    email = models.EmailField(max_length=60, unique=True)
+
+    class Meta:
+        verbose_name = "Subscription Emails"
+        verbose_name_plural = "Subscription Emails"
+
+    def __str__(self):
+        return str(self.id)+' '+str(self.email)

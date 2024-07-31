@@ -1,7 +1,8 @@
 from django.contrib import admin
 #import models
 from django.contrib.auth.models import User, Group
-from .models import (HomeModel, HomeRoomImage, HomeTourImage, HomeBreakfastImage, IntroductionModel, GalleryModel)
+from .models import (HomeModel, HomeRoomImage, HomeTourImage, HomeBreakfastImage, IntroductionModel, 
+                     GalleryModel, SubscriptionModel)
 
 # Register your models here.
 class HomeWidgetRoom(admin.StackedInline):
@@ -40,3 +41,6 @@ admin.site.unregister(Group)
 admin.site.register(HomeModel, HomePageAdmin)
 admin.site.register(IntroductionModel, IntroductionPageAdmin)
 admin.site.register(GalleryModel)
+admin.site.register(SubscriptionModel)
+# Personalizando el administrado de django
+admin.site.site_header = "Art Deco Beach Administration"

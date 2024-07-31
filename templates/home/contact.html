@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %} home {% endblock title %}
+{% block title %} contact {% endblock title %}
 
 {% block content %}
 
@@ -9,7 +10,7 @@
 
 <div class="container">
 
-    <h1 class="title my-3">Contact Us</h1>
+    <h1 class="title my-3">{% trans 'Contact Us' %}</h1>
 
 
     <!-- form -->
@@ -29,24 +30,24 @@
                 <div class="my-5 mx-auto col-sm-6 col-sm-offset-3">
                     <div class="spacer">
 
-                        <h4>Write to us</h4>
-                        <form action="" method="POST">
+                        <h4>{% trans 'Write to us' %}</h4>
+                        <form action="https://formsubmit.co/hotelartdecobeach@hotmail.com" method="POST">
 
                             <div class="form-group mb-3">
-                                <input type="text" class="form-control" name="name" placeholder="Name">
+                                <input type="text" class="form-control" name="name" placeholder="{% trans 'Name' %}">
                             </div>
                             <div class="form-group mb-3">
-                                <input type="email" class="form-control" name="email" placeholder="Enter email">
+                                <input type="email" class="form-control" name="email" placeholder="{% trans 'Enter email' %}">
                             </div>
                             <div class="form-group mb-3">
-                                <input type="phone" class="form-control" name="phone" placeholder="Phone">
+                                <input type="phone" class="form-control" name="phone" placeholder="{% trans 'Phone' %}">
                             </div>
                             <div class="form-group mb-3">
-                                <textarea type="email" class="form-control" placeholder="Message" rows="4"
+                                <textarea type="email" class="form-control" placeholder="{% trans 'Message' %}" rows="4"
                                     name="message"></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="submit" class="btn btn-primary">{% trans 'Send' %}</button>
                         </form>
                     </div>
                 </div>

@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-31 00:25-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: .\applications\home\forms.py:10 .\applications\room\forms.py:10
+#: .\templates\home\contact.html:37
+msgid "Name"
+msgstr "Nombre"
+
+#: .\applications\home\forms.py:16 .\applications\room\forms.py:16
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: .\applications\home\forms.py:21 .\applications\room\forms.py:21
+msgid "The phone number must be entered in the format: '+999999999'."
+msgstr "El número de teléfono debe ingresarse en el formato: '+999999999'."
+
+#: .\applications\home\forms.py:28 .\applications\room\forms.py:28
+#: .\templates\home\contact.html:43
+msgid "Phone"
+msgstr "Teléfono"
+
+#: .\applications\home\forms.py:32 .\applications\room\forms.py:32
+msgid "No. of Rooms"
+msgstr "No. de habitaciones"
+
+#: .\applications\home\forms.py:36 .\applications\room\forms.py:36
+msgid "No. of Adults"
+msgstr "No. de adultos"
+
+#: .\applications\home\forms.py:48 .\applications\room\forms.py:48
+#: .\templates\home\contact.html:46
+msgid "Message"
+msgstr "Mensaje"
+
+#: .\applications\home\forms.py:58
+msgid "Enter your email"
+msgstr "Correo electrónico"
+
+#: .\applications\home\views.py:57 .\applications\room\views.py:84
+msgid "Thank you for your request. We will contact you soon"
+msgstr "Gracias por tu solicitud. Nos pondremos en contacto con usted pronto"
+
+#: .\applications\home\views.py:59 .\applications\room\views.py:86
+msgid "An error occurred while submitting the request, please try again later."
+msgstr "Se produjo un error al enviar la solicitud, inténtelo nuevamente más tarde."
+
+
+#: .\applications\home\views.py:104
+msgid "You have successfully subscribed!"
+msgstr "¡Te has suscripto satisfactoriamente!"
+
+#: .\applications\home\views.py:107
+msgid "This email is already registered."
+msgstr "Este correo electrónico ya está registrado."
+
+#: .\applications\home\views.py:109
+msgid "There was an error with your subscription. Please try again."
+msgstr "Hubo un error con tu suscripción. Inténtalo de nuevo."
+
+#: .\templates\home\contact.html:13
+msgid "Contact Us"
+msgstr "Contacta con nosotros"
+
+#: .\templates\home\contact.html:33
+msgid "Write to us"
+msgstr "Escríbenos"
+
+#: .\templates\home\contact.html:40
+msgid "Enter email"
+msgstr "Correo electrónico"
+
+#: .\templates\home\contact.html:50
+msgid "Send"
+msgstr "Enviar"
+
+#: .\templates\home\gallery.html:16 .\templates\includes\footer.html:28
+#: .\templates\includes\header.html:37
+msgid "Gallery"
+msgstr "Galería"
+
+#: .\templates\home\home.html:44
+msgid "Make a Reservations"
+msgstr "Hacer una reserva"
+
+#: .\templates\home\home.html:70 .\templates\room\reserve_room.html:67
+msgid "Check-in Date"
+msgstr "Fecha de entrada"
+
+#: .\templates\home\home.html:74 .\templates\room\reserve_room.html:76
+msgid "Check-out Date"
+msgstr "Fecha de salida"
+
+#: .\templates\home\home.html:82 .\templates\room\reserve_room.html:94
+msgid "Submit"
+msgstr "Enviar"
+
+#: .\templates\home\home.html:117
+msgid "Rooms"
+msgstr "Habitaciones"
+
+#: .\templates\home\home.html:146
+msgid "Tour Packages"
+msgstr "Paquetes turísticos"
+
+#: .\templates\home\home.html:174
+msgid "Breakfast"
+msgstr "Desayuno"
+
+#: .\templates\home\introduction.html:17 .\templates\includes\footer.html:26
+#: .\templates\includes\header.html:34
+msgid "Introduction"
+msgstr "Introducción"
+
+#: .\templates\home\introduction.html:21
+msgid ""
+"\n"
+"                Hotel Art-Deco Beach since its inception started out as a "
+"passion project that later grew to what it is\n"
+"                today, our gracious benefactor known only as \"Mr John\" has "
+"contributed in the growth of the Malecon\n"
+"                situated in the beautiful city of La Ceiba.\n"
+"                "
+msgstr ""
+"\n"
+" Hotel Art-Deco Beach desde sus inicios comenzó como un Proyecto apasionante "
+"que luego creció hasta convertirse en lo que es\n"
+" hoy, nuestro amable benefactor conocido sólo como \"Sr. John\" ha "
+"contribuyó en el crecimiento del Malecón\n"
+"situado en la hermosa ciudad de La Ceiba.\n"
+" "
+
+#: .\templates\home\introduction.html:30
+msgid ""
+"\n"
+"                Our story does not end here, as we are now in the steps of "
+"greatness to be added to the historic value\n"
+"                the Malecon holds in our fair city. Once inmortalized in our "
+"fellow citizens memories, Hotel Art Deco\n"
+"                Beach will be forever remembered by all who stood in its "
+"shadow.\n"
+"                "
+msgstr ""
+"\n"
+" Nuestra historia no termina aquí, ya que ahora estamos en los pasos de "
+"grandeza que se sumará al valor histórico\n"
+"El Malecón se sostiene en nuestra bella ciudad. Una vez inmortalizado en "
+"nuestra Recuerdos de conciudadanos, Hotel Art Deco\n"
+" La playa será recordada para siempre por todos los que estuvieron en ella "
+"sombra.\n"
+" "
+
+#: .\templates\home\introduction.html:39
+msgid ""
+"\n"
+"                We are are grateful to have been included in this greatest "
+"of plans where here stands a 6 story majesty\n"
+"                where once stood nothing, therefore inheriting as a people "
+"the added value of such a striking featured\n"
+"                building in front of Malecon Beach.\n"
+"                "
+msgstr ""
+"\n"
+" Estamos agradecidos de haber sido incluidos en este grande de planos donde "
+"aquí se alza una majestuosidad de 6 pisos\n"
+" donde antes no había nada, por lo tanto heredamos como pueblo el valor "
+"añadido de una característica tan llamativa\n"
+"edificio frente a la playa del Malecón.\n"
+" "
+
+#: .\templates\includes\footer.html:15
+msgid ""
+"Hotel Art Deco Beach raising the standards of all boutique hotel in Central "
+"America.\n"
+"                    Rest assured that we are in business to make sure you "
+"have a good nights rest and a good morning's\n"
+"                    start. Situated in front of Malecon La Ceiba, Hotel Art "
+"Deco Beach is always in the middle of the\n"
+"                    cities social activities."
+msgstr ""
+"Hotel Art Deco Beach elevando los estándares de todo hotel boutique en el "
+"CentroAmericano Tenga la seguridad de que estamos en el negocio para "
+"asegurarnos de que usted Que descanses bien por la noche y que tengas un "
+"buen día\n"
+" inicio. Situado frente al Malecón La Ceiba, Hotel Art Deco Beach siempre "
+"está en medio del\n"
+"actividades sociales de las ciudades."
+
+#: .\templates\includes\footer.html:23
+msgid "Quick Links"
+msgstr "Hypervinculos"
+
+#: .\templates\includes\footer.html:25 .\templates\includes\header.html:31
+#: .\templates\room\rooms.html:17
+msgid "Rooms & Pricing"
+msgstr "Habitaciones y precios"
+
+#: .\templates\includes\footer.html:29 .\templates\includes\header.html:40
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\templates\includes\footer.html:33
+msgid "Subscription"
+msgstr "Suscribirse"
+
+#: .\templates\includes\footer.html:39
+msgid "Get Notified"
+msgstr "Notificarme"
+
+#: .\templates\includes\footer.html:62
+msgid "Website created by"
+msgstr "Sitio web creado por"
+
+#: .\templates\includes\header.html:28
+msgid "Home"
+msgstr "Principal"
+
+#: .\templates\room\room.html:45 .\templates\room\room.html:47
+msgid "Availability"
+msgstr "Disponibilidad"
+
+#: .\templates\room\room.html:45
+msgid "Available"
+msgstr "Disponible"
+
+#: .\templates\room\room.html:47
+msgid "Not Available"
+msgstr "No disponible"
+
+#: .\templates\room\room.html:49
+msgid "Amount of people:"
+msgstr "Cantidad de personas:"
+
+#: .\templates\room\room.html:50
+msgid "Size"
+msgstr "Tamaño"
+
+#: .\templates\room\room.html:51
+msgid "Price"
+msgstr "Precio"
+
+#: .\templates\room\room.html:51
+msgid "per night"
+msgstr "por noche"
+
+#: .\templates\room\room.html:54 .\templates\room\room.html:56
+msgid "Reserve"
+msgstr "Reservar"
+
+#: .\templates\room\rooms.html:31
+msgid "Check Details"
+msgstr "Ver detalles"

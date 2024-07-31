@@ -37,9 +37,20 @@ body {
     font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 .btn-reserve:hover {
     background-color: #0056b3;
+}
+.btn-disabled {
+    background-color: #bbb;
+    color: #fff;
+    border: none;
+    border-radius: 0.31rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
     text-decoration: none;
 }
 .details-container {

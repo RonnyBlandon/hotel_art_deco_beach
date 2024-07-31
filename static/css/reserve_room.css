@@ -1,0 +1,16 @@
+.container-background {
+background-image: url("../img/background-image.jpg"); 
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+}
+
+/*MEDIA QUERY*/
+
+@media (min-width: 1024px) {
+    .custom-container {
+        max-width: 26rem;
+        margin: 0 auto; /* Center the container */
+        border-radius: 1rem;
+    }
+}
