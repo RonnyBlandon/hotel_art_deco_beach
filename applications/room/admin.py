@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 # import models
 from .models import RoomModel, RoomImage
 
@@ -7,7 +8,7 @@ class RoomImageAdmin(admin.StackedInline):
     model = RoomImage
     extra = 0
 
-class RoomModelAdmin(admin.ModelAdmin):
+class RoomModelAdmin(TranslationAdmin, admin.ModelAdmin):
     inlines = [RoomImageAdmin,]
 
 

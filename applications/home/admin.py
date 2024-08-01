@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 #import models
 from django.contrib.auth.models import User, Group
 from .models import (HomeModel, HomeRoomImage, HomeTourImage, HomeBreakfastImage, IntroductionModel, 
@@ -17,7 +18,7 @@ class HomeWidgetBreakfast(admin.StackedInline):
     model = HomeBreakfastImage
     extra = 0
 
-class HomePageAdmin(admin.ModelAdmin):
+class HomePageAdmin(TranslationAdmin, admin.ModelAdmin):
     inlines = [HomeWidgetRoom, HomeWidgetTour, HomeWidgetBreakfast]
 
     def has_add_permission(self, request):

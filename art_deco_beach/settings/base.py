@@ -36,6 +36,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 
 # Application definition
 DJANGO_APPS = (
+    'modeltranslation', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -106,11 +107,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
@@ -123,6 +126,10 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale'
 ]
 
+# Model translation settings
+MODELTRANSLATION_LANGUAGES = ('en', 'es',)
+
+
 ADMINS = [
     ('Admin', 'ronnyblandon2015@gmail.com'),
 ]
@@ -130,11 +137,11 @@ ADMINS = [
 
 # EMAIL SETTINGS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.outlook.com'  # Por ejemplo, si usas Gmail
+EMAIL_HOST = 'smtp.outlook.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'ronnyblandon@hotmail.com'  # Tu correo electrónico
-EMAIL_HOST_PASSWORD = 'Laguitarra17@'  # Tu contraseña de correo electrónico
+EMAIL_HOST_USER = get_secret('EMAIL')
+EMAIL_HOST_PASSWORD = get_secret('PASS_EMAIL')
 
 
 # Default primary key field type
